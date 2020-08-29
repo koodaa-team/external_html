@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}Statbeat / {% trans %}FAQ{% endtrans %}{% endblock %}
+
+{% block scrollable_match_list %}{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="span9 faq">
+    <h1>{% trans %}Questions about Statbeat{% endtrans %}</h1>
+    <section>
+      <h2>{% trans %}Player{% endtrans %}</h2>
+
+      <h4>{% trans %}I have two profiles in Statbeat{% endtrans %}</h4>
+      <p>{% trans email=config['FEEDBACK_EMAIL'] %}If the other profile is inactive (gray), team admin can merge the profiles in the Members tab of the team page. Otherwise contact our team at {{ email }} and we will merge them.{% endtrans %}</p>
+
+      <h4>{% trans %}Wrong/missing statistics{% endtrans %}</h4>
+      <p>{% trans %}Contact the tournament organizer. You can find the contact info in the Info tab of the tournament page.{% endtrans %}</p>
+
+      <h4>{% trans %}How can I join a team?{% endtrans %}</h4>
+      <p>{% trans %}Go to team page and click "Join" to send a request for membership. You will become a member of the team when the team admin confirms the request.{% endtrans %}</p>
+
+      <h4>{% trans %}Why are my statistics not shown in the tournament page?{% endtrans %}</h4>
+      <p>{% trans %}It can be one of the following issues:{% endtrans %}</p>
+      <ul>
+        <li>{% trans %}Your team admin has not added you to the tournament's official player list.{% endtrans %}</li>
+        <li>{% trans %}Your team admin has not added your player number to the tournament's official player list.{% endtrans %}</li>
+        <li>{% trans %}The tournament organizer has added your statistics to a wrong player.{% endtrans %}</li>
+      </ul>
+      <p>{% trans %}Please contact your team's admin or the tournament organizer to fix this.{% endtrans %}</p>
+
+      <h4>{% trans %}How can I import Statbeat matches and training sessions automatically to my calendar (for example Google calendar)?{% endtrans %}</h4>
+      <p>{% trans url=url_for('settings.calendars') %}Go to your <a href="{{ url }}">calendar settings</a> and follow the instructions.{% endtrans %}</p>
+
+      <h4>{% trans %}How can I post YouTube videos?{% endtrans %}</h4>
+      <p>{% trans %}Go to <a href='http://www.youtube.com'>www.youtube.com</a>, find the video you'd like to post, copy the URL from the address bar of the browser and paste it to your post in Statbeat.{% endtrans %}</p>
+      <p><img src="{{ url_for('static', filename='images/youtube1.png') }}" title="{% trans %}Posting YouTube video{% endtrans %}"></p>
+      <p>{% trans %}When you share your post the URL will be shown as a video:{% endtrans %}</p>
+      <p><img src="{{ url_for('static', filename='images/youtube2.png') }}" title="{% trans %}Embedded YouTube video{% endtrans %}"></p>
+
+    </section>
+    <section>
+      <h2>{% trans %}Team leader{% endtrans %}</h2>
+
+      <h4>{% trans %}I registered my team to a wrong category{% endtrans %}</h4>
+      <p>{% trans %}The tournament organizer can move your team to the correct category. Please contact them. You can find the contact info in the Info tab of the tournament page.{% endtrans %}</p>
+
+      <h4>{% trans %}How to add a team logo?{% endtrans %}</h4>
+      <p>{% trans %}Go to your team’s page and click "Add logo" in the top left corner.{% endtrans %}</p>
+
+      <h4>{% trans %}I have a question regarding the deadlines of the tournament registration.{% endtrans %}</h4>
+      <p>{% trans %}Contact the tournament organizer. You can find the contact info in the Info tab of the tournament page.{% endtrans %}</p>
+
+      <h4>{% trans %}I never got a confirmation link/email after registering to a tournament{% endtrans %}</h4>
+      <p>{% trans email=config['FEEDBACK_EMAIL'] %}First check your junk email folder. If you can't find the email there please contact us at {{ email }}.{% endtrans %}</p>
+
+      <h4>{% trans %}I don’t know the emails of some of the players in my team{% endtrans %}</h4>
+      <p>{% trans %}No worries, emails are to invite team members and not mandatory. However, it's strongly recommended to invite them as it helps the players and their parents to follow your team's schedule, statistics etc. easily. Email invites can be sent later in the Members tab of the team page.{% endtrans %}</p>
+
+      <h4>{% trans %}I’d like to cancel my team's registration to a tournament{% endtrans %}</h4>
+      <p>{% trans %}Contact the tournament organizer. You can find the contact info in the Info tab of the tournament page.{% endtrans %}</p>
+
+      <h4>{% trans %}I have a question regarding the invoices/changes to orders{% endtrans %}</h4>
+      <p>{% trans %}Contact the tournament organizer. You can find the contact info in the Info tab of the tournament page.{% endtrans %}</p>
+
+      <h4>{% trans %}I’d like to add more admins to our team{% endtrans %}</h4>
+      <p>{% trans %}First invite those people to your team if they are not members yet. Then click "Update members" button in the Members tab of the team page to make them admins.{% endtrans %}</p>
+
+      <h4>{% trans %}We have duplicate teams in Statbeat{% endtrans %}</h4>
+      <p>{% trans email=config['FEEDBACK_EMAIL'] %}Contact our team at {{ email }}. If one of the teams hasn't played any matches and doesn't have players, we can merge them.{% endtrans %}</p>
+
+      <h4>{% trans %}I need to change the colours of our jerseys{% endtrans %}</h4>
+      <p>{% trans %}You can do this in your team’s registration page for the tournament.{% endtrans %}</p>
+    </section>
+  </div>
+</div>
+{% endblock %}
