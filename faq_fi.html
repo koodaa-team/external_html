@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}Statbeat / FAQ{% endblock %}
+
+{% block scrollable_match_list %}{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="span9 faq">
+    <h1>Kysymyksiä Statbeatista</h1>
+    <section>
+      <h2>Pelaaja</h2>
+
+      <h4>Minulla on kaksi tiliä Statbeatissä</h4>
+      <p>Jos toinen profiili on ei-aktiivinen (harmaa), joukkueen admin voi yhdistää profiilit joukkuesivun Jäsenet-välilehdeltä. Muutoin ota yhteyttä {{config['FEEDBACK_EMAIL']}} ja me yhdistämme profiilit.</p>
+
+      <h4>Väärin syötetyt/puuttuvat tilastot</h4>
+      <p>Ota yhteyttä turnausjärjestäjään. Yhteystiedot löytyvät turnaussivun Info-välilehdeltä.</p>
+
+      <h4>Miten liityn joukkueeseen?</h4>
+      <p>Mene joukkueen sivulle ja klikkaa "Liity" lähettääksesi pyynnön liittyä joukkueeseen. Sinusta tulee joukkueen jäsen, kun joukkueen admin hyväksyy pyyntösi.</p>
+
+      <h4>Miksi tilastojani ei näy turnauksen sivuilla?</h4>
+      <p>Syy voi olla yksi seuraavista:</p>
+      <ul>
+        <li>Joukkueesi admin ei ole lisännyt sinua turnauksen viralliseen pelaajaluetteloon.</li>
+        <li>Joukkueesi admin ei ole lisännyt pelinumeroasi turnauksen viralliseen pelaajaluetteloon.</li>
+        <li>Turnauksen järjestäjä on merkannut tilastosi väärälle pelaajalle.</li>
+      </ul>
+      <p>Ota yhteyttä joukkueesi adminiin tai turnausjärjestäjään asian korjaamiseksi.</p>
+
+      <h4>Miten saan ottelut ja harjoitukset Statbeatistä automaattisesti omaan kalenteriini (esimerkiksi Google-kalenteriin)?</h4>
+      <p>Mene <a href="{{ url_for('settings.calendars') }}">kalenteriasetuksiin</a> a seuraa ohjeita.</p>
+
+      <h4>Kuinka voin postata YouTube-videoita?</h4>
+      <p>GMene osoitteeseen <a href='http://www.youtube.com'>www.youtube.com</a>, etsi video jonka haluat postata, kopioi osoite selaimen osoitekentästä ja liitä se Statbeat-viestiisi.</p>
+      <p><img src="{{ url_for('static', filename='images/youtube1.png') }}" title="Lisää YouTube video"></p>
+      <p>Kun jaat postisi YouTube-linkki näytetään videona.</p>
+      <p><img src="{{ url_for('static', filename='images/youtube2.png') }}" title="Upotettu YouTube video"></p>
+
+    </section>
+    <section>
+      <h2>Joukkueenjohtaja</h2>
+
+      <h4>Ilmoitin joukkueeni väärään sarjaan</h4>
+      <p>Turnausjärjestäjä voi siirtää joukkueesi oikeaan sarjaan. Ota yhteyttä heihin. Yhteystiedot löytyvät turnaussivun Info-välilehdeltä.</p>
+
+      <h4>Kuinka lisään joukkueelleni logon?</h4>
+      <p>Mene joukkueesi sivulle ja klikkaa "Lisää logo" vasemmasta yläkulmasta.</p>
+
+      <h4>Kysymys turnausilmoittautumiseen liittyvistä aikarajoista.</h4>
+      <p>Ota yhteyttä turnausjärjestäjään. Yhteystiedot löytyvät turnaussivun Info-välilehdeltä.</p>
+
+      <h4>En saanut vahvistussähköpostia ilmoittaessani joukkuetta turnaukseen</h4>
+      <p>Tarkista ensin roskapostikansiosi. Jos sähköpostia ei löydy sieltä, ota yhteyttä {{config['FEEDBACK_EMAIL']}}.</p>
+
+      <h4>En tiedä joukkueeni pelaajien sähköpostiosoitteita</h4>
+      <p>Ei hätää, sähköpostit tarvitaan joukkueen jäsenten kutsumista varten ja ne eivät ole pakollisia. On kuitenkin erittäin suositeltavaa kutsua heidät, koska se helpottaa mm. joukkueen aikataulujen ja tilastojen seuraamista. Sähköpostit voi lähettää myöhemminkin joukkuesivun Jäsenet-välilehdeltä.</p>
+
+      <h4>Haluaisin peruuttaa joukkueeni ilmoittautumisen turnaukseen</h4>
+      <p>Ota yhteyttä turnausjärjestäjään. Yhteystiedot löytyvät turnaussivun Info-välilehdeltä.</p>
+
+      <h4>Kysymys liittyen laskuihin tai tuotetilausten muutoksiin</h4>
+      <p>Ota yhteyttä turnausjärjestäjään. Yhteystiedot löytyvät turnaussivun Info-välilehdeltä.</p>
+
+      <h4>Haluaisin joukkueelleni lisää admin-käyttäjiä</h4>
+      <p>Kutsu ensin henkilöt joukkueeseen, jos he eivät ole vielä joukkueen jäseniä. Sitten klikkaa "Muokkaa jäseniä"-nappulaa joukkuesivun Jäsenet-välilehdellä tehdäksesi heistä admineja.</p>
+
+      <h4>Joukkueellani on kaksi tiliä Statbeatissä</h4>
+      <p>Ota yhteyttä {{config['FEEDBACK_EMAIL']}}. Jos toinen joukkueista ei ole vielä pelannut otteluita eikä sillä ole pelaajia, voimme yhdistää joukkueet.</p>
+
+      <h4>Minun pitää vaihtaa pelipaitojen värejä</h4>
+      <p>Voit tehdä sen joukkueesi ilmoittautumissivulla.</p>
+    </section>
+  </div>
+</div>
+{% endblock %}
